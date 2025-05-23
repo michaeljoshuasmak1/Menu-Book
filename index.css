@@ -1,0 +1,168 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: #424242;
+    font-family: 'Barlow';
+}
+
+body {
+    background-color: white;
+}
+
+button {
+    all: unset;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+button:hover > img {
+    width: 18px;
+    height: 18px;
+}
+
+button:active > img {
+    width: 14px;
+    height: 14px;
+}
+
+div.appbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 16px;
+    background-color: #f44336;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+div.hero img {
+    aspect-ratio: 2;
+    width: 100%;
+    object-fit: cover;
+}
+
+div.header-text {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span.tagline {
+    font-size: 20px;
+}
+
+span.document-title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+span.price-note {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+div.menu-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+div.menu-tile {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+}
+
+div.menu-photo img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 100%;
+}
+
+div.menu-tile-name {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 16px;
+    align-self: stretch;
+    text-align: center;
+}
+
+div.menu-tile-description {
+    font-size: 12px;
+    align-self: stretch;
+    text-align: center;
+    padding: 0 16px;
+    padding-bottom: 16px;
+    height: 60px;
+}
+
+div.menu-price-row {
+    display: flex;
+    flex-direction: row;
+    /* Optional, sdh by default */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+span.price-description {
+    font-size: 12px;
+}
+
+div.price-and-qty {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.price {
+    margin-right: 8px;
+}
+
+.qty {
+    font-size: 12px;
+    width: 16px;
+    text-align: center;
+}
+
+.appbar > button {
+    all: unset;
+    padding: 0 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #4caf50;
+    height: 100%;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    div.menu-area {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 800px) {
+    div.menu-area {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
